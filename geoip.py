@@ -4,7 +4,7 @@ from datetime import datetime
 
 with open(".token", 'r') as f: token = str(f.readline())
 
-bot = commands.Bot(intents=discord.Intents.all(), description="Coded by DeadSkajp#5906", help_command=None)
+bot = commands.Bot(intents=discord.Intents.all(), description="Coded by Skajpik#3232", help_command=None)
 
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
