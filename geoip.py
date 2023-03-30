@@ -28,7 +28,7 @@ async def ip(interaction: discord.Interaction, ip : str):
                         async with session.get(f"https://vpnapi.io/api/{ipv4}") as api: json_stats = await api.json(); vpn = json_stats["security"]["vpn"]; proxy = json_stats["security"]["proxy"]; tor = json_stats["security"]["tor"]
                 except: vpn = "?"; proxy = "?"; tor = "?"
                 embed = discord.Embed(title=f"IP info  |  {ipv4}", description=f"\nGoogle Maps: [Open](https://www.google.com/maps/search/google+map++{Lag},{Long})\n```IP: {ip}\nNetwork: {network}\nCity: {city}\nRegion: {region}\nRegion Code: {regcode}\nCountry: {countryname}\nCountry Code: {countrycode}\nCapital: {countrycap}\nTLD: {tld}\nContinent Code: {contcode}\nIn Europe: {ineu}\nPostal: {postal}\nLocation: {Lag}, {Long}\nTimezone: {timezone}\nUTC Offset: {utc_off}\nCalling Code: {call}\nCurrency: {cur}\nLanguage: {lang}\nORG: {org}\nVPN: {vpn}\nProxy: {proxy}\nTor: {tor}```", color=25 + random.randrange(999999), timestamp=datetime.utcnow())
-                embed.set_footer(text="By DeadSkajp#5906")
+                embed.set_footer(text="By Skajpik#3232")
     await interaction.response.send_message(embed=embed, ephemeral=True)
 
 bot.run(token)
